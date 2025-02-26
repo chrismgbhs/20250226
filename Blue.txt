@@ -1,0 +1,32 @@
+// Online C# Editor for free
+// Write, Edit and Run your C# code using C# Online Compiler
+
+using System;
+
+public class HelloWorld
+{
+    public static void Main(string[] args)
+    {
+        string x = "Southville International School and Colleges";
+        string expectedWord = x;
+        string[] y = x.Split(' ');
+        int letterCounter;
+        string[] outputWord = new string[y.Length];
+        string finalOutput = "";
+        bool doProgram = true;
+        
+                for (int lineCounter = 0; doProgram == true; lineCounter++)
+            {
+                for (int wordCounter = 0; wordCounter < y.Length; wordCounter++)
+                {
+                    for (letterCounter = 0; letterCounter < lineCounter && letterCounter < y[wordCounter].Length; letterCounter++)
+                    {
+                        Console.Write(y[wordCounter][letterCounter]);
+                        outputWord[wordCounter] += y[wordCounter][letterCounter];
+                    }
+                    Console.Write(" ");
+                }
+                Console.WriteLine();
+            }
+    }
+}
